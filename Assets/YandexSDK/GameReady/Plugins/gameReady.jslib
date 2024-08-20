@@ -1,11 +1,11 @@
 mergeInto(LibraryManager.library,
 {
-	GameReadyInternal: function() {
+	GameplayReadyInternal: function() {
 		if (ysdk !== null && ysdk.features.LoadingAPI !== undefined && ysdk.features.LoadingAPI !== null) {
-			ysdk.features.LoadingAPI?.ready();
+			ysdk.features.LoadingAPI.ready();
 			console.log('Game Ready');
 		}
-		else{
+		else {
 			console.error('Failed - Game Ready');
 		}
 	},

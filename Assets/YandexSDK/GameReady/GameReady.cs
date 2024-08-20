@@ -26,7 +26,7 @@ namespace YandexSDK
             isGameReadyUsed = true;
             Message("Gameplay ready");
 #if !UNITY_EDITOR
-                GameReadyInternal();
+                GameplayReadyInternal();
 #endif
         }
         
@@ -65,10 +65,10 @@ namespace YandexSDK
         }
  
         [DllImport("__Internal")]
-        private static extern void GameReadyInternal();
+        private static extern void GameplayReadyInternal();
         [DllImport("__Internal")]
-        private static extern void GameStartInternal();
+        private static extern void GameplayStartInternal();
         [DllImport("__Internal")]
-        private static extern void GameStopInternal();
+        private static extern void GameplayStopInternal();
     }
 }
