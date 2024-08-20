@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace YandexSDK.Entity
+namespace YandexSDK.Example.Entity
 {
     [Serializable]
     public class PlayerInfoSimulationEntity

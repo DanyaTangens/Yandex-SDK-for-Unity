@@ -21,6 +21,16 @@ namespace YandexSDK.Example.Scripts
             playerPhotoText.text = YandexGame.Instance.playerPhoto;
         }
 
+        public void SetLeaderboardScore(int score)
+        {
+            YandexGame.Instance.SetLeaderboardScore("Test", score);
+        }
+        
+        public void GetLeaderboard()
+        {
+            YandexGame.Instance.GetLeaderboard("Test", 20, 2);
+        }
+        
         private void OnEnable()
         {
             YandexGame.onGetDataEvent += Authorization;

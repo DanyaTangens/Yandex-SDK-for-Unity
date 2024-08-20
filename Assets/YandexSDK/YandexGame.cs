@@ -55,9 +55,6 @@ namespace YandexSDK
             }
         }
         
-        [DllImport("__Internal")]
-        private static extern void InitGameInternal();
-        
         private void GetDataInvoke()
         {
             if (isSdkEnabled)
@@ -71,5 +68,8 @@ namespace YandexSDK
 #endif
                 Debug.Log(message);
         }
+        
+        [DllImport("__Internal")]
+        private static extern void InitGameInternal();
     }   
 }

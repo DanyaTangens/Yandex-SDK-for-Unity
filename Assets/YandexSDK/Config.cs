@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using YandexSDK.Entity;
 using YandexSDK.Enum;
+using YandexSDK.Example.Entity;
 
 namespace YandexSDK
 {
@@ -26,9 +27,17 @@ namespace YandexSDK
         
         [Tooltip("Включить модуль доски лидеров?")]
         public bool isLeaderboardEnable = true;
-        
         [Tooltip("Записывать рекорд анонимного игрока?")]
         public bool isNeedSaveScoreAnonymousPlayer = true;
+        [Tooltip("Использовать кастомный спрайт для отображения пользователей без аватаров.")]
+        public Sprite customHiddenPlayerPhoto;
+        [Tooltip("Кол-во получения верхних топ игроков")]
+        [Range(1, 20)]
+        public int quantityTop = 5;
+
+        [Tooltip("Кол-во получаемых записей возле пользователя")]
+        [Range(1, 10)]
+        public int quantityAround = 2;
         
         [Header("Другие настройки")]
         [Tooltip("Включить автоматическую архивацию билда?")]
@@ -42,6 +51,7 @@ namespace YandexSDK
                 PlayerPhotoSizeEnum.Small => "small",
                 PlayerPhotoSizeEnum.Medium => "medium",
                 PlayerPhotoSizeEnum.Large => "large",
+                PlayerPhotoSizeEnum.NonePhoto => "nonePhoto",
                 _ => null
             };
         }
