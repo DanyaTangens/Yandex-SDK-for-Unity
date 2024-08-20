@@ -3,6 +3,7 @@ using UnityEditor.Callbacks;
 using UnityEditor.Build.Reporting;
 using UnityEditor.Build;
 using System.IO;
+using YandexSDK.Editor.BuildManager;
 
 namespace YandexSDK.Editor
 {
@@ -23,6 +24,7 @@ namespace YandexSDK.Editor
         [PostProcessBuild]
         public static void ModifyBuildDo(BuildTarget target, string pathToBuiltProject)
         {
+            ModifyBuildManager.ModifyIndex(pathToBuiltProject);
             ArchivePostProcessBuild.Archiving(pathToBuiltProject);
         }
     }
